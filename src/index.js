@@ -63,8 +63,6 @@ class Game extends React.Component {
         const current = history[history.length -1];
         const squares = current.squares.slice();
 
-
-
         if (squares[i] || calculateWinner(squares)) {
             return;
         }
@@ -103,7 +101,7 @@ class Game extends React.Component {
         const current = history[this.state.stepNumber]
         const winner = calculateWinner(current.squares);
         //create an array of past moves we can navigate to
-        let className = 
+
         const moves = history.map((step, move) => {
             //create discription text
             const desc = move ?
